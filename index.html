@@ -1,0 +1,43 @@
+<!doctype html>
+<html ng-app="app_snake_game">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+
+
+
+
+</head>
+
+<body ng-controller="snake_game_controller">
+    <div id="stage">
+        <canvas id="game_ui_layer"></canvas>
+        <canvas id="game_viewport_layer"></canvas>
+        <canvas id="game_background_layer"></canvas>
+    </div>
+
+
+    <!--Js Game Components-->
+    <script src="app.js"></script>
+    <script src="_core/game_view.js"></script>
+    <script src="_core/game_hud.js"></script>
+    <script src="_core/game_player.js"></script>
+
+    <script>
+        /*Initialize elements*/
+
+        $(window).on("load", function () {
+            setCanvasSize();
+            setCanvasbackground();
+            drawIntroText();
+        });
+    </script>
+
+</body>
+
+</html>
